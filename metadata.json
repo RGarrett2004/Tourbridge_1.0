@@ -1,0 +1,8 @@
+
+{
+  "name": "TourBridge",
+  "description": "The ultimate national database and tool center for traveling artists, featuring venue mapping, band hosting networks, and professional crew discovery.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

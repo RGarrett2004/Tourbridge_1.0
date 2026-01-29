@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default: Deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Users: Users can read/write their own data
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Organizations: 
+    // For now, allow authenticated access to organizations. 
+    // In production, this should be restricted to members found in the 'members' field/subcollection.
+    match /organizations/{orgId} {
+      allow read: if request.auth != null; 
+      allow write: if request.auth != null; // TODO: Restrict to owners/admins
+
+      // Public Venues: Read-only for everyone? Or just Admin?
+      // Plan: "Read allowed for App Admin (Reid)"
+      // But maybe "public" implies shared? 
+      // Plan says: "organizations/{orgId}/public_venues: Read allowed for App Admin (Reid)"
+      match /public_venues/{venueId} {
+        allow read: if request.auth != null && request.auth.token.email == 'reidgarrett334@gmail.com';
+        allow write: if false;
+      }
+      
+      // Allow unrestricted access to subcollections for members (placeholder)
+      match /{subcollection=**} {
+         allow read, write: if request.auth != null;
+      }
+    }
+  }
+}
