@@ -78,13 +78,6 @@ const MasterRouting: React.FC = () => {
         }
     };
 
-    return (
-    const [view, setView] = useState<'PIPELINE' | 'WAREHOUSE' | 'SHOW_DETAILS'>('PIPELINE');
-
-    // ... (existing state) ...
-
-    const [selectedOpportunity, setSelectedOpportunity] = useState<GigOpportunity | null>(null);
-
     // Handler to open show details
     const handleOpenShow = (opp: GigOpportunity) => {
         setSelectedOpportunity(opp);
