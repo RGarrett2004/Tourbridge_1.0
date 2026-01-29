@@ -38,7 +38,7 @@ const LoginScreen: React.FC = () => {
                     <div className="w-16 h-16 bg-white rounded-2xl mx-auto flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.2)] mb-6">
                         <Music className="text-black w-8 h-8" />
                     </div>
-                    <h1 className="text-4xl font-black text-white tracking-tighter mb-2">TOURBRIDGE</h1>
+                    <h1 className="text-4xl font-black text-white tracking-tighter mb-2">TOURBRIDGER</h1>
                     <p className="text-gray-500 uppercase tracking-[0.3em] text-xs font-bold">The Backstage Network</p>
                 </div>
 

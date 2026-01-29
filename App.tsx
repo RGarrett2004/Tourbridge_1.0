@@ -278,7 +278,7 @@ const App: React.FC = () => {
             <nav className="w-20 md:w-64 border-r border-gray-800 flex flex-col bg-gray-950/50 shrink-0">
               <div className="p-4 flex-1 space-y-2">
                 <div className="mb-6 px-2">
-                  <h1 className="hidden md:block text-xl font-black tracking-tighter text-white">TOURBRIDGE</h1>
+                  <h1 className="hidden md:block text-xl font-black tracking-tighter text-white">TOURBRIDGER</h1>
                   <p className="hidden md:block text-[9px] text-gray-500 font-bold uppercase tracking-[0.2em] leading-none">Control Center</p>
                   <div className="md:hidden flex justify-center"><Music className="text-white" /></div>
                 </div>
